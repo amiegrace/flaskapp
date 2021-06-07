@@ -14,7 +14,7 @@ The admin page will redirect to the home page if the user isnt an admin for secu
 Vote links with game as the votes casted are entered into the database 
 This changes the outcome of the game as the amount of votes cast for the leading chocolate can be seen
 It also says if there are no votes yet
-test
+
 """
 
 
