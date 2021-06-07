@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+
+    <form action="" method ="POST" novalidate>
+
+        {{ form.hidden_tag() }}
+        {{ form.suggestion.label }}
+        {{ form.suggestion() }}
+        {% for error in form.suggestion.errors %}
+            {{ error }}
+        {% endfor %}
+        <br />
+        {{ form.submit() }}
+        
+    </form>
+    {{ message }}
+
+    <p>
+        Back to the <a href="{{ url_for('welcome') }}">home</a> page!
+    </p>
+
+{% endblock %}
+    

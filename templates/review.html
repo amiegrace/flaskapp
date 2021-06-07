@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+
+
+<h1>Review The Choccy Shop!</h1>
+
+<p>Bought some of our chocolate? Recieved the perfect gift? We'd love to hear from you.
+</p>
+    <form action="" method ="POST" novalidate>
+
+        {{ form.hidden_tag() }}
+        {{ form.chocolate.label }}
+        {{ form.chocolate() }}
+        {% for error in form.chocolate.errors %}
+            {{ error }}
+        {% endfor %}
+        <br />
+        {{ form.hidden_tag() }}
+        {{ form.review.label }}
+        {{ form.review() }}
+        {% for error in form.review.errors %}
+            {{ error }}
+        {% endfor %}
+        <br />
+        {{ form.submit() }}
+
+    </form>
+    {{ message }}
+
+    <img src="{{ url_for('static', filename='background-84692_1280.jpeg')}}" alt="Chocolate Shop"/>
+    <p>
+        Back to the <a href="{{ url_for('welcome') }}">home</a> page!
+    </p>
+
+
+{% endblock %}

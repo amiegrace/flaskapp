@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+
+    <form action="" method ="POST" novalidate>
+
+
+        {{ form.hidden_tag() }}
+        {{ form.first_question.label }}
+        <br />
+        {{ form.first_question() }}
+
+        <br />
+        {{ form.hidden_tag() }}
+        {{ form.second_question.label }}
+        <br />
+        {{ form.second_question() }}
+
+        <br />
+        
+        {{ form.hidden_tag() }}
+        {{ form.third_question.label }}
+        <br />
+        {{ form.third_question() }}
+
+        <br />
+        {{ form.submit() }}
+
+    </form>
+    {{favorite}}
+
+    <p>
+        Go to the <a href="{{ url_for('welcome') }}">Home</a> page.
+    </p>
+
+{% endblock %}

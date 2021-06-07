@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+
+
+    <h1>{{ milkchoc ["name"] }}</h1>
+    <p>
+        Price: {{ milkchoc ["price"] }}
+    </p>
+    <p>
+        {{ milkchoc ["description"] }}
+    </p>
+    <a href="{{ url_for('add_to_milk_cart', milk_choc_id=milkchoc['milk_choc_id']) }}">Add to cart</a>
+ 
+{% endblock %}

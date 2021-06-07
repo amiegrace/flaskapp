@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+
+    <h1>Milk Chocolate!</h1>
+    <table>
+        {% for milkchoc in milkchocs %}  
+            <tr>
+                <td>{{ milkchoc["name"]}}</td>
+                <td>{{ milkchoc["price"] }}</td>
+                <td><a href="{{ url_for('milkchoc', milk_choc_id=milkchoc['milk_choc_id'] ) }}">See details</a></td>
+
+            </tr>
+        {% endfor %}
+    </table>
+    <img src="{{ url_for('static', filename='nuttymilkchoc.jpeg')}}" alt="Milk choc" class="milk"/>
+
+
+    <p>Got an idea? Just can't hold it in? Suggest our next great creation <a href="{{ url_for('suggestion') }}">here</a> </p>
+
+{% endblock %}

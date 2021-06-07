@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+
+    <img src="{{ url_for('static', filename='milkchoc.jpeg')}}" alt="Milk Chocolate" />
+
+    <form action="" method ="POST" novalidate>
+
+        {{ form.hidden_tag() }}
+        {{ form.chocolate.label }}
+        {{ form.chocolate() }}
+        {% for error in form.chocolate.errors %}
+            {{ error }}
+        {% endfor %}
+        <br />
+        {{ form.submit() }}
+
+    </form>
+    {{ outcome }}
+
+    <p>
+        Go to the <a href="{{ url_for('welcome') }}">home</a> page!
+    </p>
+
+{% endblock %}

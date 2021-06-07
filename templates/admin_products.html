@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+<h2>Go Back To Admin  <a href="{{ url_for('admin') }}">here</a></h2>
+<table>
+    {% for milk_choc in milkchocs %}  
+        <tr>
+            <td>{{ milk_choc['name'] }}</td>
+            <td><a href="{{ url_for('remove_product_milk', milk_choc_id=milk_choc['milk_choc_id'])}}">DELETE</a></td>
+        </tr>
+    {% endfor %}
+    {% for dark_choc in darkchocs %}  
+        <tr>
+            <td>{{ dark_choc['name'] }}</td>
+            <td><a href="{{ url_for('remove_product_dark', dark_choc_id=dark_choc['dark_choc_id'])}}">DELETE</a></td>
+        </tr>
+    {% endfor %}
+    {% for white_choc in whitechocs %}  
+        <tr>
+            <td>{{ white_choc['name'] }}</td>
+            <td><a href="{{ url_for('remove_product_white', white_choc_id=white_choc['white_choc_id'])}}">DELETE</a></td>
+        </tr>
+    {% endfor %}
+</table>
+ 
+{% endblock %}

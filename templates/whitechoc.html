@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+
+    <h1>{{ whitechoc ["name"] }}</h1>
+    <p>
+        Price: {{ whitechoc ["price"] }}
+    </p>
+    <p>
+        {{ whitechoc ["description"] }}
+    </p>
+    <a href="{{ url_for('add_to_white_cart', white_choc_id=whitechoc['white_choc_id']) }}">Add to cart</a>
+ 
+{% endblock %}

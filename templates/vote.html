@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+
+    <form action="" method ="POST" novalidate>
+
+
+        {{ form.hidden_tag() }}
+        {{ form.vote.label }}
+        <br />
+        {{ form.vote() }}
+
+        <br />
+        {{ form.submit() }}
+
+    </form>
+    <p>{{outcome}}</p>
+    <p>
+        Go to the <a href="{{ url_for('welcome') }}">Home</a> page.
+    </p>
+
+{% endblock %}

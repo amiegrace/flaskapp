@@ -1,0 +1,82 @@
+
+header {
+  padding: 100px; 
+  text-align: center;
+  background-color:whitesmoke;
+  color: palevioletred;
+  font-size: 25px;
+    }  
+
+h1 {
+  color: palevioletred;
+  border-bottom: double;
+}
+  
+h2 {
+  color: palevioletred;
+  border-bottom: double;
+      
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;    
+    align-self: center;
+    background-color: darksalmon;
+  }
+    
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: whitesmoke;
+    text-align: center;
+    padding: 12px 14px;
+    text-decoration: none;
+  }
+
+  li a:hover {
+    background-color: palevioletred;
+    color: black;
+  }
+
+  section {
+    
+    font-size: 105%;
+    background-color:whitesmoke;
+    padding: 25px;
+    padding-left: 100px;
+    margin: 20px;
+}
+
+img {
+  padding: 5px;
+  width: 250px;
+  border-radius: 8px;
+  float: right;
+}
+
+    /*  The above CSS in relation to the nav learned from w3 schools 
+   https://www.w3schools.com/css/css_navbar_horizontal.asp */
+
+
+body {
+    background-color: whitesmoke;
+    margin-left: 10%;
+    margin-right: 10%;
+    border: 2px solid black;
+    padding: 10px 10px 10px 10px;
+    font-family: sans-serif, Arial, "Times New Roman";
+}
+
+footer {
+    border-radius: 8px;
+    width: 500px;
+    background-color:darksalmon;
+    float: center;
+  }
+  

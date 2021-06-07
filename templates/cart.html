@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+
+    <h1>Your cart</h1>
+    {% if cart %}
+        <table>
+        <a href="{{url_for('clear_cart')}}"><button>Clear cart</button></a>
+        {% for milk_choc_id in cart['milkchoc'] %}  
+            <tr>
+                <td>{{ cart['milkchoc'][milk_choc_id] }}</td>
+                <td>{{ names['milkchoc'][milk_choc_id]['name'] }}</td>
+                <td>{{ names['milkchoc'][milk_choc_id]['price'] }}</td>
+                <td><a href="{{ url_for('remove_one_from_milk_cart', milk_choc_id=milk_choc_id) }}">Remove 1</a></td>
+                <td></td>
+                <td><a href="{{ url_for('remove_from_milk_cart', milk_choc_id=milk_choc_id) }}">Remove all</a></td>
+            </tr>
+        {% endfor %}
+
+        {% for dark_choc_id in cart['darkchoc'] %}  
+            <tr>
+                <td>{{ cart['darkchoc'][dark_choc_id] }}</td>
+                <td>{{ names['darkchoc'][dark_choc_id]['name'] }}</td>
+                <td>{{ names['darkchoc'][dark_choc_id]['price'] }}</td>
+                <td><a href="{{ url_for('remove_one_from_dark_cart', dark_choc_id=dark_choc_id) }}">Remove 1</a></td>
+                <td></td>
+                <td><a href="{{ url_for('remove_from_dark_cart', dark_choc_id=dark_choc_id) }}">Remove all</a></td>
+            </tr>
+        {% endfor %}
+
+        {% for white_choc_id in cart['whitechoc'] %}  
+            <tr>
+                <td>{{ cart['whitechoc'][white_choc_id] }}</td>
+                <td>{{ names['whitechoc'][white_choc_id]['name'] }}</td>
+                <td>{{ names['whitechoc'][white_choc_id]['price'] }}</td>
+                <td><a href="{{ url_for('remove_one_from_white_cart', white_choc_id=white_choc_id) }}">Remove 1</a></td>
+                <td></td>
+                <td><a href="{{ url_for('remove_from_white_cart', white_choc_id=white_choc_id) }}">Remove all</a></td>
+            </tr>
+        {% endfor %}
+    </table>
+    {% if total > 0.00 %}
+        <p>Your cart total is {{total}}!</p>
+    {% else %}
+        <p>Your cart is empty!</p>
+    {% endif %}
+    <hr>
+    <a href="{{url_for('checkout')}}"><button>Check Out</button></a>
+    {% endif %}
+{% endblock %}

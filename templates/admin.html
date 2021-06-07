@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+
+<h1> Admin Page</h1>
+
+<p> Reset vote <a href="{{ url_for('reset_vote') }}">here</a></p>
+
+<p>See full Product List <a href="{{ url_for('list_products') }}">here</a></p>
+
+{% endblock %}
+

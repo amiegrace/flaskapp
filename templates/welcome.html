@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+
+<section>
+    <h2> About Us</h2>
+    <p>
+        Hello! Welcome to The Choccy Shop. We are a small chocolate shop operating completely online since 2021.
+        Here, you can find our signature milk, white and dark chocolate in all shapes and sizes,
+        without leaving the comfort of your home! Our chocolate is the perfect gift for someone you love, or a treat for
+        yourself!
+        <img src="{{ url_for('static', filename='choc shop.jpeg')}}" alt="Chocolate Shop" />
+    </p>
+</section>
+
+<section>
+    <h2> Milk Chocolate</h2>
+    <p>
+        In the mood for milk? Find our selection <a href="{{ url_for('milkchocolate') }}">here!</a>
+        <img src="{{ url_for('static', filename='milkchoc.jpeg')}}" alt="Chocolate Shop" />
+    </p>
+</section>
+
+
+<section>
+    <h2>White Chocolate</h2>
+    <p>
+        White chocolate? You got it! Check out the delicious range <a href="{{ url_for('whitechocolate') }}">here!</a>
+        <img src="{{ url_for('static', filename='darkmilkwhite.jpeg')}}" alt="Chocolate Shop" />
+    </p>
+</section>
+
+<section>
+    <h2>Dark Chocolate</h2>
+    <P>
+        Vegan? prefer a darker option? Our dark chocolate range <a href="{{ url_for('darkchocolate') }}">here</a> is
+        perfect for you.
+        <img src="{{ url_for('static', filename='Dark_chocolate_bar.jpeg')}}" alt="Chocolate Shop" />
+    </p>
+</section>
+
+<section>
+    <h2> Quiz!</h2>
+    <p>
+        Dont know what flavour of chocolate to buy? We can help! Take our <a href="{{ url_for('quiz') }}">quiz!</a>
+        <img src="{{ url_for('static', filename='background-84692_1280.jpeg')}}" alt="Chocolate Shop" />
+    </p>
+   
+</section>
+
+
+<section>
+    <h2>
+        We want to hear from you..
+    </h2>
+    <p>
+        We need your help! What will our next great creation be? Share your idea <a href="{{ url_for('suggestion') }}">here</a> </p>
+    </p>
+    <p>
+        What is your favourite chocolate? We need to know what our most popular chocolate is, you can help us out by casting your vote <a href="{{ url_for('vote') }}">here!</a>
+    </p>
+    <p>
+        If you're interested, you can also see how our poll is doing by selecting what chocolate you think is the favourite and seeing the vote count!
+        See the votes so far <a href="{{ url_for('game') }}">here!</a>
+
+    </p>
+    <p>
+        Thanks for stopping by! Share your thoughts with us <a href="{{ url_for('review') }}">here!</a>
+    </p>
+</section>
+
+
+</body>
+
+
+
+{% endblock %}
